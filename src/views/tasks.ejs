@@ -1,0 +1,44 @@
+<%- include('includes/taskHead') %>
+
+<section class="grid-container">
+    <nav class="menu-horizontal">
+        <div class="navbar">
+            <ul>
+                <li><a class="task-links" href="/">U do </a></li>
+                <li>Suas Tarefas</li>
+                <li> Olá, <%=user.nome%></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="task-text">
+
+
+            <% if(task.length > 0) {%>
+                <div class="table-responsive">
+                    <table class="table table-stripped">
+                        <% task.forEach(task=> {%>
+                            <tr class="table-row">
+                                <td class="table-column main-content-table"><%= task.titulo %></td>
+                                <td class="table-column"><%= task.descricao %></td>
+                                <td class="table-column"><a class="task-links text-primary"  href="/addTask/edit/<%= task._id %>">Editar</a></td>
+                                <td class="table-column"><a class="text-danger task-links" href="/task/delete/<%= task._id %>">Excluir</a></td>
+                            </tr>
+                       <%  }); %>
+                    </table>
+                </div>
+            <% } else {%>
+                <p class="text-center lead">Não possuem tarefas ainda</p>
+            <% } %>
+
+        </div>
+        <div class="add-task-button">
+            <button class="add-task"> <a class="main-link" href="/addTask/index">Adicionar Tarefas</a></button>
+        </div>
+    
+</section>
+
+<%- include('includes/taskFooter') %>
+
+
+
+ 

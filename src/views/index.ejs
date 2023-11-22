@@ -1,0 +1,37 @@
+
+<%- include('includes/header') %>
+
+<section class="container-section">
+    <div class="container">
+        <div class="container-form">
+            <div class="form-title">
+                <h1 class="app-title">U do</h1>    
+            </div>
+
+            <%- include('includes/messages') %>
+
+            <div class="form-login">
+
+                <form action="/login/login" method="post">
+                    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+                    <label class="label-form">Email</label>
+                    <input  class="input-form" type="text" placeholder="exemplo@gmail.com" name="email" required>
+                    
+                    <label class="label-form" for="Senha">Senha</label>
+                    <input class="input-form" type="password" placeholder="Digite sua senha" name="password" required>
+                                    
+                    <button class="main-btn title-chato" type="submit" ><a >Login</a></button> 
+                    
+                </form>
+            </div>
+
+            <a href="/cadastro" class="pg-cadastro title-chato main-link">Não tem uma conta? Cadastre-se</a>
+        </div>
+
+        <div class="container-img img-logo">
+             <!-- <img src="/public/assets/js/todo.jpg" alt="Logo deu trablho">  -->
+        </div>
+    </div>
+</section>
+
+<%- include('includes/footer'); %>

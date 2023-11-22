@@ -1,0 +1,36 @@
+<%- include('includes/taskHead') %>
+
+    <section class="grid-container">
+        <nav class="menu-horizontal">
+            <div class="navbar">
+                <ul>
+                    <li><a class="task-links" href="/">U do</a> </li>
+                    <li><a class="task-links" href="/task/index">Suas Tarefas</a></li>
+                    <li> Olá, <%= user.nome %></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="task-text">
+            <h1 >Crie ou edite sua Tarefa</h1>
+
+
+
+                <div class="form-add">
+                    <% if (task._id) { %>
+                        <form class="form-add" action="/addTask/edit/<%= task._id %>" method="post">
+                        <%}else { %>
+                            <form class="form-add" action="/task/register" method="post">
+                        <%}%>
+                            <input  type="hidden" name="_csrf" value="<%= csrfToken  %>">
+                            <label class="label-add">Titulo da Tarefa</label>
+                            <input class="input-add" type="text" value="<%= task.titulo %>" name="titulo" id="" placeholder="Digite o titulo da tarefa">
+                            <label class="label-add">Descrição da Tarefas</label>
+                            <textarea class="text-add" name="descricao" value="<%= task.descricao %>" id="descricao" placeholder="Opcional" cols="30" rows="10"></textarea>
+                            <button type="submit" class="save-submit">Salvar</button>
+                        </form>
+                </div>
+        </div>
+
+    </section>
+
+    <%- include('includes/taskFooter') %>

@@ -1,0 +1,263 @@
+
+:root {
+    --border-color: rgba(128, 128, 128, 0.123);
+    --orange-color: #b96f43;
+    --blue-color: #55E5DB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: linear-gradient(to bottom, var(--orange-color), var(--blue-color));
+}
+
+.grid-container {
+    display: grid;
+    grid-template-rows: 5% 80% 15%;
+    height: 95vh;
+    margin: 20px;
+    background-color: #ffffffe3;
+    border-radius: 15px;
+    
+}
+
+.menu-horizontal {
+    
+    padding: 10px;
+    background: #2eafa7; /* Cor de fundo da navbar */
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.navbar li {
+    margin: 0 10px;
+    color: white;
+    font-weight: bold;
+}
+.navbar li a {
+    margin: 0 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+
+/* COMEÇANDO A MEXER COM A TABELA */
+
+.table.stripped{
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+
+.table.stripped td {
+    padding: 15px;
+    text-align: center;
+    margin-top: 20px;
+    margin: 20px; /* Adicione um espaçamento geral entre as células */
+}
+
+.main-content-table{
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.table-column{
+    padding: 20px; /* Adicione um espaçamento específico para as células da tabela */
+    font-size: 25px;
+}
+
+.table.stripped tr:nth-child(even){
+    background-color: #f3f3f3;
+}
+
+
+.task-links{
+    font-family: 'Quicksand', sans-serif;
+        text-align: center;
+        text-decoration: none;
+        color:#f3f3f3 ;
+        margin: 0 10px; /* Margem nos links para separá-los */
+        padding: 5px; /* Adiciona preenchimento aos links */
+        text-align: center; /* Centraliza o texto dos links */
+        text-decoration: none; /* Remove a decoração de link padrão */
+        color: #f3f3f3; /* Cor do texto dos links */
+        border-radius: 5px; /* Borda arredondada nos links */
+        display: inline-block; /* Permite ajustar a largura dos links */
+}
+
+.text-danger{
+    color: red;
+}
+.text-primary{
+    color: blue;
+}
+
+
+/* ACABOU A TABELA */
+
+/* BOTÃO DE ADICIONAR A TAREFA */
+.add-task-button {
+    margin-top: 20px;
+    /* display: flex;
+    justify-content: center; */
+    text-align: center;
+    
+}
+
+.add-task-button button {
+    margin: auto;
+    height: 30px;
+    width: 20%;
+    background-color:#2eafa7;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.164) ;
+    box-shadow: #555;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-task-button a {
+    
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    
+}
+
+/* FIM DO BOTAO  DE ADICIONAR A TAREFA */
+
+.task-text h1{
+    margin: auto;
+    color: #00193B;
+    font-size: 35px;
+}
+
+.task-text {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 0;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.task-text h2 {
+    font-size: 24px;
+    color: #0000002f;
+}
+
+/* Definitivamente da pagina de ADICIONAR tarefas */
+
+.save-submit{
+    margin: auto;
+    margin-top: 10px;
+    height: 30px;
+    width: 30%;
+    font-size: 20px;
+    background-color:#2eafa7;
+    color: white;
+    border: 1px solid rgba(0, 0, 0, 0.164) ;
+    box-shadow: #555;
+    border-radius: 5px;
+    cursor: pointer;
+    
+   
+}
+
+.form-add{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-add{
+    width: 100%;
+    height: 25px;
+    border-radius: 10px;
+    box-shadow: 0.5 rgba(0, 0, 0, 0.5);
+    border: 0.5px solid gray; 
+}
+
+.label-add{
+    width: 100%;
+    height: 20px;    
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 25px;
+}
+
+.text-add{
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0.5 rgba(0, 0, 0, 0.5);
+    border: 0.5px solid gray; 
+}
+
+
+
+/* RESPONSIVIDADE */
+
+@media screen and (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .navbar li {
+        /* Adiciona margem vertical entre os itens da navbar */
+        text-align: center;
+
+    }
+
+    .navbar li:not(:nth-child(2)) {
+        display: none;
+    }
+
+    .add-task-button {
+        text-align: center;
+    }
+
+    .add-task-button button {
+        width: 60%; /* Ajusta a largura do botão para ocupar mais espaço na tela móvel */
+    }
+
+    .table.stripped {
+        width: 100%; /* Ajusta a largura da tabela para ocupar a largura total da tela móvel */
+    }
+
+    .table.stripped td {
+        padding: 10px; /* Reduz o espaçamento interno das células da tabela para economizar espaço */
+    }
+
+    .main-content-table {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="/">U do </a>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      
+      <ul class="navbar-nav">
+
+        <li class="nav-item">
+          <a href="/contato/index" class="nav-link">Cadastrar Contatos</a>
+        </li>
+      <% if(user) {%>
+        <li class="nav-item ml-5">
+          <a class="nav-link active text-white"  href="/login/logout">Sair</a>
+        </li>
+      <% } else { %>
+        <li class="nav-item ml-5 text-decoration-none">
+          <a class="nav-link active text-white"  href="/login/index">Login</a>
+        </li>
+        <% } %>
+
+
+      </ul>
+
+    </div>
+  </div>
+</nav>
