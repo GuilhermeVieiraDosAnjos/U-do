@@ -9,7 +9,7 @@ const MongoStore = require('connect-mongo');
 const flash = require('connect-flash');
 const routes = require('./router');
 const path = require('path');
-const helmet = require('helmet');
+// const helmet = require('helmet');
 const csrf = require('csurf');
 const { middlewareGlobal, checkCSRFError, csrfMiddleware } = require('./src/middlewares/middleware');
 const { log } = require('console');
@@ -42,7 +42,7 @@ const sessionOptions = session({
 });
 
 // Configuring the app
-// app.use(helmet()); // Verificar se o helmet não ta dando b.o
+// Verificar se o helmet não ta dando b.o
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.resolve(__dirname, 'public')));
 
