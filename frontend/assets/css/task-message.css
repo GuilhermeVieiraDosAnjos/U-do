@@ -186,9 +186,25 @@ body {
     box-shadow: #555;
     border-radius: 5px;
     cursor: pointer;
-    
-   
 }
+
+.save-submit a{
+    margin: auto;
+    margin-top: 10px;
+    height: 30px;
+    width: 30%;
+    font-size: 20px;
+    background-color:#2eafa7;
+    color: #fff;
+    text-decoration: none;
+}
+
+.save-submit a:hover{
+        background-color:#6FCFC2 ;   
+        color: rgb(0, 0, 0);
+}
+
+
 
 .form-add{
     display: flex;

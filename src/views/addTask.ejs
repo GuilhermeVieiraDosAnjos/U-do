@@ -13,7 +13,9 @@
         <div class="task-text">
             <h1 >Crie ou edite sua Tarefa</h1>
 
-
+            <div class="flash-messages">
+                <%- include('includes/messages')  %>
+              </div> 
 
                 <div class="form-add">
                     <% if (task._id) { %>
@@ -27,6 +29,7 @@
                             <label class="label-add">Descrição da Tarefas</label>
                             <textarea class="text-add" name="descricao" value="<%= task.descricao %>" id="descricao" placeholder="Opcional" cols="30" rows="10"></textarea>
                             <button type="submit" class="save-submit">Salvar</button>
+                            <button class="save-submit back" type="submit" ><a href="/task/index">Voltar</a></button>
                         </form>
                 </div>
         </div>

@@ -23,8 +23,8 @@ exports.register = async (req, res) => {
             return;
         }
 
-        req.flash('success', 'Sua tarefa foi salvo com sucesso');
-        req.session.save(() => res.redirect(`/addTask/index`));
+        req.flash('success', 'Tarefa salva com sucesso');
+        req.session.save(() => res.redirect(`/task/index`));
         return;
     } catch (e) {
         console.log(e);

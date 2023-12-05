@@ -73,6 +73,21 @@ font-family: 'Quicksand', sans-serif; */
         color: #00193B;
     }
     
+    .back-login{
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-family: 'Quicksand', sans-serif;
+        color: #00193B;
+    }
+    .back-login a{
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-family: 'Quicksand', sans-serif;
+        text-decoration: none;
+        
+        
+    }
+
     /* .flash-messsages{
         max-width: 2em;
         margin: 20px auto;

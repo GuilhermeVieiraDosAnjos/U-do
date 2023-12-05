@@ -21,9 +21,9 @@ exports.register = async function(req,res) {
         }
 
         console.log('Cadastro foi bem sucedido')
-        req.flash('success', 'Cadastrado com sucesso, clique em "U Do" para voltar ao login');
+        req.flash('success', 'Cadastrado com sucesso');
         req.session.save(function(){
-            return res.redirect('/cadastro');
+            return res.redirect('/');//mudando pra redirecionar ao index
         });
     }catch(e){
         console.log("Erro no cadastro", e);
