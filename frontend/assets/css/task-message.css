@@ -17,8 +17,6 @@ body {
     padding: 0;
     height: 100vh;
     background: linear-gradient(to bottom, var(--orange-color), var(--blue-color));
-    background-size: cover;
-    background: no-repeat;
 }
 
 .grid-container {

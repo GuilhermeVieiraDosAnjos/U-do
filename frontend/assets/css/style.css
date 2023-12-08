@@ -15,8 +15,6 @@ font-family: 'Quicksand', sans-serif; */
         padding: 0;
         height: 100vh;
         background: linear-gradient(to bottom,#b96f43 ,#55E5DB );
-        background-size: cover;
-        background: no-repeat;
     }
     
     .conatiner-section{
